@@ -1,0 +1,15 @@
+.Card{
+    height: auto;
+    width: 22%;
+    display: inline-block;
+    border: solid;
+    margin: 0.10%;
+    position: relative;
+    border-color: black;
+    border-radius: 18px;
+}
+.CardImage{
+    border-radius: 18px;
+    height: 35vh;
+    width:100%;
+}

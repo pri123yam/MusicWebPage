@@ -1,0 +1,15 @@
+.Topcomponent{
+    background-color: pink;
+    text-align: center;
+    border-style: solid;
+    border-color: palevioletred;
+}
+.InputBox{
+    height: 4vh;
+    width: 50%;
+    font-size:100%; 
+}
+.buttonclass{
+    height: 4vh;
+    width: 10%;
+}
