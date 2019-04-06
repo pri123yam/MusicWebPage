@@ -5,11 +5,11 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 import './music-cards.css';
+import displaySongs from '../selectors/DisplaySongSelector';
 
 class MusicCards extends Component {
     CreateMusicCards() {
         return this.props.songs.map((item) => {
-            if(item.active===true)
             return (
                 <div key={item.id} className='Card'>
                     <Card>
@@ -34,7 +34,7 @@ class MusicCards extends Component {
 }
 function mapStateToProps(state) {
     return {
-        songs: state.filteredsongs
+        songs: displaySongs(state)
     };
 }
 

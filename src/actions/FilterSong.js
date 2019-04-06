@@ -1,10 +1,10 @@
-export const filterSongs=(songs,filterArray)=>{
-    console.log(songs);
+export const filterSongs=(filterType,selectedValue,isChecked)=>{
     return{
         type:'FILTER_SONGS',
         payload:{
-            songs:songs,
-            filterArray:filterArray
+            filterType:filterType,
+            selectedValue:selectedValue,
+            isChecked:isChecked
         }
     }
 }

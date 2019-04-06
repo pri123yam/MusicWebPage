@@ -5,42 +5,30 @@ import { filterSongs } from '../actions/FilterSong';
 import './filter.css';
 class FilterComponent extends Component {
     list = {
-        genre: { 'pop': false, 'jazz': false, 'romance': false, 'country': false },
-        artist: { 'gajendra verma': false, 'miles davis': false,"ammy virk":false,"rohan rathore":false,"one direction":false, 'adele': false, 'taylor swift': false },
+        genre: [ "pop",'jazz','romance','country','rock'],
+        artist: ["gajendra verma",'miles davis','ammy virk','rohan rathore','one direction','adele','taylor swift']
     }
     handleChange = (event) => {
-        let filterKeyword = event.target.name;
+        let filterType = event.target.name;
+        let selectedValue=event.target.value;
         const isChecked = event.target.checked;
-        Object.keys(this.list).map((listitem) => {
-            Object.keys(this.list[listitem]).map((item) => {
-                if (item === filterKeyword)
-                    this.list[listitem][item] = isChecked;
-            })
-        });
-        let filterArray = [];
-        Object.keys(this.list).map((listitem) => {
-            Object.keys(this.list[listitem]).map((item) => {
-                if (this.list[listitem][item] === true)
-                    filterArray.push(item);
-            })
-        });
-        this.props.filterSongs(this.props.allsongs, filterArray);
+        this.props.filterSongs(filterType,selectedValue,isChecked);
     }
     render() {
         return (
             <div className='Filterbuttons'>
                 {
-                    Object.keys(this.list).map((filteredElements) => {
+                    Object.keys(this.list).map((filteredElement) => {
                         return (
                             <div className='container'>
                                 <div className="dropdown">
-                                    <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{filteredElements}
+                                    <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{filteredElement}
                                         <span className="caret"></span></button>
                                     <ul className="dropdown-menu" >
                                         {
-                                            Object.keys(this.list[filteredElements]).map((listItem) => {
+                                            this.list[filteredElement].map((listItem) => {
                                                 return (
-                                                    <li key={listItem}><label><input type="checkbox" name={listItem} onChange={this.handleChange} /> {listItem} </label> </li>
+                                                    <li key={listItem}><label><input type="checkbox" name={filteredElement} value={listItem} onChange={this.handleChange} /> {listItem} </label> </li>
                                                 );
                                             })
                                         }
@@ -54,15 +42,7 @@ class FilterComponent extends Component {
         );
     }
 }
-
-function mapStateToProps(state) {
-    return {
-        allsongs: state.allsongs,
-        filteredsongs: state.filteredsongs
-    };
-}
-
 function matchDispatchToProps(dispatch) {
     return bindActionCreators({ filterSongs: filterSongs }, dispatch);
 }
-export default connect(mapStateToProps, matchDispatchToProps)(FilterComponent);
+export default connect(null, matchDispatchToProps)(FilterComponent);
