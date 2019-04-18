@@ -1,9 +1,8 @@
-export const searchSongs = (searchKeyword,songs)=>{
+export const searchSongs = (searchKeyword)=>{
     return{
         type:'SEARCH_SONGS',
         payload:{
-            searchKeyword:searchKeyword,
-            songs:songs
+            searchKeyword:searchKeyword
         }
     }
 }

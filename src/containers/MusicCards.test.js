@@ -18,7 +18,7 @@ describe("<MusicCards> Component",()=>{
                         genre:"pop",
                         artist:"taylor swift",
                         duration:"5:53",
-                        thumbnail:''
+                        thumbnail:""
                     },
                     {
                         id:2,

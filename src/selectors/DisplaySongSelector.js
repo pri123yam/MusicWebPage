@@ -4,12 +4,12 @@ const getSearchKeyword = (state) => state.data.searchKeyword;
 const getFilterGenre = (state) => [...state.data.filterArrays.genre];
 const getFilterArtist = (state) => [...state.data.filterArrays.artist];
 
-const selectSongsByKeyword = createSelector(
+export const SelectSongsByKeyword = createSelector(
 	[getAllSongs, getSearchKeyword], (songs, searchKeyword) => songs.filter(
 		song => song.name.includes(searchKeyword) || song.artist.includes(searchKeyword)
 	))
 
-const selectSongsByGenre = createSelector([selectSongsByKeyword, getFilterGenre], (songs, genres) => {
+export const SelectSongsByGenre = createSelector([SelectSongsByKeyword, getFilterGenre], (songs, genres) => {
 	if (genres.length === 0)
 		return songs;
 	else {
@@ -20,7 +20,7 @@ const selectSongsByGenre = createSelector([selectSongsByKeyword, getFilterGenre]
 	}
 })
 
-const selectSongsByArtist = createSelector([selectSongsByGenre, getFilterArtist], (songs, artists) => {
+export const SelectSongsByArtist = createSelector([SelectSongsByGenre, getFilterArtist], (songs, artists) => {
 	if (artists.length === 0)
 		return songs;
 	else {
@@ -30,4 +30,4 @@ const selectSongsByArtist = createSelector([selectSongsByGenre, getFilterArtist]
 		return artistFilteredSongs;
 	}
 })
-export default selectSongsByArtist;
+export default SelectSongsByArtist;
