@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterComponent/> should render <FilterComponent/> component correctly 1`] = `
+"<div className=\\"Filterbuttons\\">
+  <div className=\\"container\\">
+    <div className=\\"dropdown\\">
+      <button className=\\"btn btn-primary dropdown-toggle\\" type=\\"button\\" data-toggle=\\"dropdown\\">
+        artist
+        <span className=\\"caret\\" />
+      </button>
+      <ul className=\\"dropdown-menu\\">
+        <li>
+          <label>
+            <input id=\\"one\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"one\\" onChange={[Function]} />
+             
+            one
+             
+          </label>
+           
+        </li>
+        <li>
+          <label>
+            <input id=\\"two\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"two\\" onChange={[Function]} />
+             
+            two
+             
+          </label>
+           
+        </li>
+        <li>
+          <label>
+            <input id=\\"three\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"three\\" onChange={[Function]} />
+             
+            three
+             
+          </label>
+           
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div className=\\"container\\">
+    <div className=\\"dropdown\\">
+      <button className=\\"btn btn-primary dropdown-toggle\\" type=\\"button\\" data-toggle=\\"dropdown\\">
+        genre
+        <span className=\\"caret\\" />
+      </button>
+      <ul className=\\"dropdown-menu\\">
+        <li>
+          <label>
+            <input id=\\"good\\" type=\\"checkbox\\" name=\\"genre\\" value=\\"good\\" onChange={[Function]} />
+             
+            good
+             
+          </label>
+           
+        </li>
+        <li>
+          <label>
+            <input id=\\"bad\\" type=\\"checkbox\\" name=\\"genre\\" value=\\"bad\\" onChange={[Function]} />
+             
+            bad
+             
+          </label>
+           
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>"
+`;

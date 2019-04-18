@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchBar/> should renders <SearchBar/> component correctly 1`] = `
+"<div className=\\"Topcomponent\\">
+  <h2>
+    MUSIC WEB PAGE
+  </h2>
+  <input className=\\"InputBox\\" placeholder=\\"type search text here\\" type=\\"text\\" onChange={[Function]} />
+</div>"
+`;

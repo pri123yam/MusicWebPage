@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MusicCards> Component should render <MusicCards> component correctly 1`] = `
+"<div className=\\"Card\\">
+  <Card tag=\\"div\\">
+    <CardImg className=\\"CardImage\\" src=\\"\\" alt=\\"Card image cap\\" tag=\\"img\\" />
+    <CardBody tag=\\"div\\">
+      <CardTitle tag=\\"div\\">
+        name:
+        enchanted
+      </CardTitle>
+      <CardSubtitle tag=\\"div\\">
+        genre:
+        pop
+      </CardSubtitle>
+      <CardText tag=\\"p\\">
+        artist:
+        taylor swift
+      </CardText>
+    </CardBody>
+  </Card>
+</div>
+
+
+<div className=\\"Card\\">
+  <Card tag=\\"div\\">
+    <CardImg className=\\"CardImage\\" src=\\"\\" alt=\\"Card image cap\\" tag=\\"img\\" />
+    <CardBody tag=\\"div\\">
+      <CardTitle tag=\\"div\\">
+        name:
+        what makes you beautiful
+      </CardTitle>
+      <CardSubtitle tag=\\"div\\">
+        genre:
+        pop
+      </CardSubtitle>
+      <CardText tag=\\"p\\">
+        artist:
+        one direction
+      </CardText>
+    </CardBody>
+  </Card>
+</div>"
+`;

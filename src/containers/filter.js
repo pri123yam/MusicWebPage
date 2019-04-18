@@ -2,33 +2,28 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { filterSongs } from '../actions/FilterSong';
+import GetFilters from '../selectors/GetFilters';
 import './filter.css';
-class FilterComponent extends Component {
-    list = {
-        genre: [ "pop",'jazz','romance','country','rock'],
-        artist: ["gajendra verma",'miles davis','ammy virk','rohan rathore','one direction','adele','taylor swift']
-    }
+export class FilterComponent extends Component {
     handleChange = (event) => {
-        let filterType = event.target.name;
-        let selectedValue=event.target.value;
-        const isChecked = event.target.checked;
+        let {name:filterType, value:selectedValue, checked:isChecked}=event.target;
         this.props.filterSongs(filterType,selectedValue,isChecked);
     }
     render() {
         return (
             <div className='Filterbuttons'>
                 {
-                    Object.keys(this.list).map((filteredElement) => {
+                    Object.keys(this.props.filters).map((filteredElement) => {
                         return (
-                            <div className='container'>
+                            <div key={filteredElement} className='container'>
                                 <div className="dropdown">
                                     <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{filteredElement}
                                         <span className="caret"></span></button>
                                     <ul className="dropdown-menu" >
                                         {
-                                            this.list[filteredElement].map((listItem) => {
+                                            this.props.filters[filteredElement].map((listItem) => {
                                                 return (
-                                                    <li key={listItem}><label><input type="checkbox" name={filteredElement} value={listItem} onChange={this.handleChange} /> {listItem} </label> </li>
+                                                    <li key={listItem}><label><input id={listItem} type="checkbox" name={filteredElement} value={listItem} onChange={this.handleChange} /> {listItem} </label> </li>
                                                 );
                                             })
                                         }
@@ -42,7 +37,12 @@ class FilterComponent extends Component {
         );
     }
 }
-function matchDispatchToProps(dispatch) {
-    return bindActionCreators({ filterSongs: filterSongs }, dispatch);
+function matchStateToProps(state) {
+    return {
+        filters: GetFilters(state)
+    };
 }
-export default connect(null, matchDispatchToProps)(FilterComponent);
+function matchDispatchToProps(dispatch) {
+    return bindActionCreators({ filterSongs }, dispatch);
+}
+export default connect(matchStateToProps, matchDispatchToProps)(FilterComponent);

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> should render connected <App/> components correctly 1`] = `
+"<div>
+  <Connect(SearchBar) />
+  <Connect(FilterComponent) />
+  <Connect(MusicCards) />
+</div>"
+`;

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import SongsReducer from './reducer-songs';
-import SelectSongs from './reducer-select-songs';
+import SongsReducer from './ReducerSongs';
+import SelectSongs from './ReducerSelectSongs';
 const rootReducer = combineReducers({
     data: SelectSongs
 });

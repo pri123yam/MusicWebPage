@@ -4,11 +4,11 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
-import './music-cards.css';
+import './MusicCards.css';
 import displaySongs from '../selectors/DisplaySongSelector';
 
-class MusicCards extends Component {
-    CreateMusicCards() {
+export class MusicCards extends Component {
+    render() {
         return this.props.songs.map((item) => {
             return (
                 <div key={item.id} className='Card'>
@@ -23,13 +23,6 @@ class MusicCards extends Component {
                 </div>
             );
         });
-    }
-    render() {
-        return (
-            <div>
-                {this.CreateMusicCards()}
-            </div>
-        )
     }
 }
 function mapStateToProps(state) {
