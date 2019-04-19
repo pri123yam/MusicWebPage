@@ -17,13 +17,32 @@ export class FilterComponent extends Component {
                         return (
                             <div key={filteredElement} className='container'>
                                 <div className="dropdown">
-                                    <button className="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{filteredElement}
-                                        <span className="caret"></span></button>
+
+                                    <button 
+                                            className="btn btn-primary dropdown-toggle" 
+                                            type="button" 
+                                            data-toggle="dropdown">
+                                            
+                                            {filteredElement}
+                                            <span className="caret"></span>
+                                    </button>
+                                    
                                     <ul className="dropdown-menu" >
                                         {
                                             this.props.filters[filteredElement].map((listItem) => {
                                                 return (
-                                                    <li key={listItem}><label><input id={listItem} type="checkbox" name={filteredElement} value={listItem} onChange={this.handleChange} /> {listItem} </label> </li>
+                                                    <li 
+                                                        key={listItem}>
+                                                        <label><input 
+                                                                      id={listItem} 
+                                                                      type="checkbox" 
+                                                                      name={filteredElement} 
+                                                                      value={listItem} 
+                                                                      onChange={this.handleChange} /> 
+                                                                      
+                                                                      {listItem} 
+                                                        </label>
+                                                    </li>
                                                 );
                                             })
                                         }

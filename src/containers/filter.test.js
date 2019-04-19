@@ -13,7 +13,7 @@ describe('<FilterComponent/>', () => {
             beforeEach(() => {
                 initProps = {
                     filters: {
-                        artist: ['one', 'two', 'three'],
+                        artist: ['one', 'two','three'],
                         genre: ['good', 'bad']
                     }}
                 filterSongsMock= jest.fn();

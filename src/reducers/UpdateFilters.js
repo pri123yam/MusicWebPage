@@ -1,10 +1,9 @@
 import initialState from './Store';
 export default function (state = initialState(), action='') {
-    console.log(action);
     switch (action.type) {
         case "SEARCH_SONGS":
             {
-                let searchKeyword = action.payload.searchKeyword;
+                let searchKeyword = action.payload.searchKeyword.trim();
 
                 //updating the state
                 let data ={...state};
@@ -19,7 +18,7 @@ export default function (state = initialState(), action='') {
 
                 //updating the state
                 let data ={...state};
-                Object.keys(data.filterArrays).map((type)=>{
+                Object.keys(data.filterArrays).forEach((type)=>{
                     if(type===filterType)
                         if(isChecked===true)
                         data.filterArrays[type].push(selectedValue)

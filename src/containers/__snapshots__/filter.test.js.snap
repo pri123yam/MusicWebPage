@@ -12,29 +12,20 @@ exports[`<FilterComponent/> should render <FilterComponent/> component correctly
         <li>
           <label>
             <input id=\\"one\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"one\\" onChange={[Function]} />
-             
             one
-             
           </label>
-           
         </li>
         <li>
           <label>
             <input id=\\"two\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"two\\" onChange={[Function]} />
-             
             two
-             
           </label>
-           
         </li>
         <li>
           <label>
             <input id=\\"three\\" type=\\"checkbox\\" name=\\"artist\\" value=\\"three\\" onChange={[Function]} />
-             
             three
-             
           </label>
-           
         </li>
       </ul>
     </div>
@@ -49,20 +40,14 @@ exports[`<FilterComponent/> should render <FilterComponent/> component correctly
         <li>
           <label>
             <input id=\\"good\\" type=\\"checkbox\\" name=\\"genre\\" value=\\"good\\" onChange={[Function]} />
-             
             good
-             
           </label>
-           
         </li>
         <li>
           <label>
             <input id=\\"bad\\" type=\\"checkbox\\" name=\\"genre\\" value=\\"bad\\" onChange={[Function]} />
-             
             bad
-             
           </label>
-           
         </li>
       </ul>
     </div>

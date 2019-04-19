@@ -3,7 +3,6 @@ const getAllSongs = (state) => [...state.data.songs];
 const getSearchKeyword = (state) => state.data.searchKeyword;
 const getFilterGenre = (state) => [...state.data.filterArrays.genre];
 const getFilterArtist = (state) => [...state.data.filterArrays.artist];
-
 export const SelectSongsByKeyword = createSelector(
 	[getAllSongs, getSearchKeyword], (songs, searchKeyword) => songs.filter(
 		song => song.name.includes(searchKeyword) || song.artist.includes(searchKeyword)
