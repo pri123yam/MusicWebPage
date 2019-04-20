@@ -1,8 +1,7 @@
-import React from 'react';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import ReducerUpdateFilters from './UpdateFilters';
-import initialState from './Store';
+import ReducerUpdateFilters from './updateFilters';
+import {initialState} from './Store';
 Enzyme.configure({
     adapter: new Adapter()
 });
@@ -13,8 +12,8 @@ describe("Checking proper Updation of FIlters",()=>{
     let initState;
     let finalState;
     beforeEach(()=>{
-        initState=initialState();
-        finalState=initialState();
+        initState=initialState;
+        finalState=initialState;
     });
 
     it('should return the initial state when type is Missing', () => {

@@ -1,4 +1,4 @@
-let initialState={
+export const initialState={
     songs:[
     {
         id:1,
@@ -118,7 +118,3 @@ filterArrays:{
     genre:[],
     artist:[]
 }};
-
-export default function(){
-    return initialState;
-}

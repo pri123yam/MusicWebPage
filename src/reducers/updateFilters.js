@@ -1,5 +1,5 @@
-import initialState from './Store';
-export default function (state = initialState(), action='') {
+import {initialState} from './Store';
+export default function (state = initialState, action='') {
     switch (action.type) {
         case "SEARCH_SONGS":
             {

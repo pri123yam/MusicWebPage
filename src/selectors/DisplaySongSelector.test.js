@@ -6,15 +6,15 @@ describe('test the working of DisplaySongSelector',()=>{
     let initState;
     let SelectedSongs;
 
-    describe('test the working of selectors individually',()=>{
+    describe('the working of selectors individually',()=>{
 
-        describe('test the working of song selector by keyword',()=>{
+        describe('the working of song selector by keyword',()=>{
 
             beforeEach(()=>{
                 initState=JSON.parse(JSON.stringify(rootReducer()));
             });
     
-            it('should run correctly with search key="ka" correctly',()=>{
+            it('should run correctly with searchkey: ka',()=>{
                 initState.data.searchKeyword='ka';
                 SelectedSongs=[{
                                     artist: "ammy virk",
