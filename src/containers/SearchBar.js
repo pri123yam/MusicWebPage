@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {searchSongs} from '../actions/SearchSong'
+import {SearchSongs} from '../actions/SearchSong'
 import './SearchBar.css'
 export class SearchBar extends Component{
     handleChange=(event)=>{
@@ -22,6 +22,6 @@ export class SearchBar extends Component{
 }
 
 function matchDispatchToProps(dispatch){
-    return bindActionCreators({searchSongs},dispatch);
+    return bindActionCreators({SearchSongs},dispatch);
 }
 export default connect(null,matchDispatchToProps)(SearchBar);

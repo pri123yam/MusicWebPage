@@ -3,24 +3,28 @@ import {SearchBar} from './SearchBar';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({
-    adapter: new Adapter()
+  adapter: new Adapter()
 });
-describe('<SearchBar/>', () => {
+describe('checks the working of search bar', () => {
 
-    it('should renders <SearchBar/> component correctly', () => {
-        const searchMock=jest.fn();
-        const event = {
-            target: {
-                value: 'Search Key'
-            }
-        };
-        const wrapper = Enzyme.shallow(
-            <SearchBar
-                searchSongs={searchMock}
-            />
-        );
-        expect(wrapper.debug()).toMatchSnapshot();
-        wrapper.find('.InputBox').simulate('change', event);
-        expect(searchMock).toHaveBeenCalledWith('Search Key');
-    });
+  const searchMock = jest.fn();
+  const wrapper = Enzyme.shallow( <
+    SearchBar searchSongs = {
+      searchMock
+    }
+    />
+  );
+  it('should match the previous snapshot', () => {
+
+    expect(wrapper.debug()).toMatchSnapshot();
+  })
+  it('should renders <SearchBar/> component correctly', () => {
+    const event = {
+      target: {
+        value: 'Search Key'
+      }
+    };
+    wrapper.find('.InputBox').simulate('change', event);
+    expect(searchMock).toHaveBeenCalledWith('Search Key');
+  });
 });

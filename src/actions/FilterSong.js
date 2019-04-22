@@ -1,4 +1,4 @@
-export const filterSongs=(filterType,selectedValue,isChecked)=>{
+export const FilterSongs=(filterType,selectedValue,isChecked)=>{
     return{
         type:'FILTER_SONGS',
         payload:{

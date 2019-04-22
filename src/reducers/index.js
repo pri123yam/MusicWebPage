@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import updateFilters from './updateFilters';
+import UpdateFilters from './updateFilters';
 const rootReducer = combineReducers({
-    data: updateFilters
+    data: UpdateFilters
 });
 
 export default rootReducer;

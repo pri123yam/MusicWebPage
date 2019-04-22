@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App/> should render connected <App/> components correctly 1`] = `
+exports[`To check the rendering of connected App components correctly checks that the previous snapshot of App matches 1`] = `
 "<div>
   <Connect(SearchBar) />
   <Connect(FilterComponent) />

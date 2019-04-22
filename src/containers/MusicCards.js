@@ -5,7 +5,7 @@ import {
     CardTitle, CardSubtitle
 } from 'reactstrap';
 import './MusicCards.css';
-import displaySongs from '../selectors/DisplaySongSelector';
+import DisplaySongs from '../selectors/DisplaySongSelector';
 
 export class MusicCards extends Component {
     render() {
@@ -27,7 +27,7 @@ export class MusicCards extends Component {
 }
 function mapStateToProps(state) {
     return {
-        songs: displaySongs(state)
+        songs: DisplaySongs(state)
     };
 }
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SearchBar/> should renders <SearchBar/> component correctly 1`] = `
+exports[`checks the working of search bar should match the previous snapshot 1`] = `
 "<div className=\\"Topcomponent\\">
   <h2>
     MUSIC WEB PAGE

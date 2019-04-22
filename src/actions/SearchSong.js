@@ -1,4 +1,4 @@
-export const searchSongs = (searchKeyword)=>{
+export const SearchSongs = (searchKeyword)=>{
     return{
         type:'SEARCH_SONGS',
         payload:{
