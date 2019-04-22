@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import UpdateFilters from './updateFilters';
+import UpdateFilters from './UpdateFilters';
 const rootReducer = combineReducers({
     data: UpdateFilters
 });

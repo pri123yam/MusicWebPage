@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { filterSongs } from '../actions/FilterSong';
+import {FilterSongs} from '../actions/FilterSong';
 import GetFilters from '../selectors/GetFilters';
-import './filter.css';
+import './Filter.css';
 export class FilterComponent extends Component {
     handleChange = (event) => {
         let {name:filterType, value:selectedValue, checked:isChecked}=event.target;
-        this.props.filterSongs(filterType,selectedValue,isChecked);
+        this.props.FilterSongs(filterType,selectedValue,isChecked);
     }
     render() {
         return (
@@ -62,6 +62,6 @@ function matchStateToProps(state) {
     };
 }
 function matchDispatchToProps(dispatch) {
-    return bindActionCreators({ filterSongs }, dispatch);
+    return bindActionCreators({ FilterSongs }, dispatch);
 }
 export default connect(matchStateToProps, matchDispatchToProps)(FilterComponent);

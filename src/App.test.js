@@ -3,7 +3,7 @@ import App from './App';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import SearchBar from './containers/SearchBar';
-import FilterComponent from './containers/filter';
+import FilterComponent from './containers/Filter';
 import MusicCards from './containers/MusicCards';
 Enzyme.configure({
     adapter: new Adapter()

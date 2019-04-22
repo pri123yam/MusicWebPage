@@ -1,5 +1,5 @@
 import React from 'react';
-import { FilterComponent } from './filter';
+import { FilterComponent } from './Filter';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({

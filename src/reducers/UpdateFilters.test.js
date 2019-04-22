@@ -1,4 +1,4 @@
-import UpdateFilters from './updateFilters';
+import UpdateFilters from './UpdateFilters';
 import {initialState} from './Store';
 
 

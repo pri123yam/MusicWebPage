@@ -6,7 +6,7 @@ import './SearchBar.css'
 export class SearchBar extends Component{
     handleChange=(event)=>{
         var searchKey=event.target.value;
-        this.props.searchSongs(searchKey);
+        this.props.SearchSongs(searchKey);
     }
     render(){
         return(
