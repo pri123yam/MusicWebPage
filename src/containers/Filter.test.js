@@ -21,7 +21,7 @@ describe('<FilterComponent/>', () => {
           wrapper = Enzyme.shallow( < FilterComponent filters = {
               initProps.filters
             }
-            filterSongs = {
+            FilterSongs = {
               filterSongsMock
             }
             />);   

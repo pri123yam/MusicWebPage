@@ -8,8 +8,8 @@ Enzyme.configure({
 describe('checks the working of search bar', () => {
 
   const searchMock = jest.fn();
-  const wrapper = Enzyme.shallow( <
-    SearchBar searchSongs = {
+  const wrapper = Enzyme.shallow( <SearchBar 
+    SearchSongs = {
       searchMock
     }
     />
