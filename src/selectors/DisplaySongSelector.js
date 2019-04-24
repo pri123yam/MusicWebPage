@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 const getAllSongs = (state) => [...state.data.songs];
-const getSearchKeyword = (state) => state.data.searchKeyword;
+const getSearchKeyword = (state) => state.data.searchKeyword.trim();
 const getFilterGenre = (state) => [...state.data.filterArrays.genre];
 const getFilterArtist = (state) => [...state.data.filterArrays.artist];
 export const SelectSongsByKeyword = createSelector(

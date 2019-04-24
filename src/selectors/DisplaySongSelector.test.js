@@ -30,8 +30,7 @@ describe('tests the working of DisplaySongSelector', () => {
 
       it('should handle with search key=" " correctly', () => {
         initState.data.searchKeyword = '  ';
-        selectedSongs = []; //finally expected empty array
-
+        selectedSongs =initState.data.songs; //finally expected complete song list
         expect(Selectors.SelectSongsByKeyword(initState)).toEqual(selectedSongs);
       });
 
@@ -71,7 +70,6 @@ describe('tests the working of DisplaySongSelector', () => {
         ];
         expect(Selectors.SelectSongsByGenre(initState)).toEqual(selectedSongs);
       })
-
     })
 
     describe('test the working of song selector by artists', () => {

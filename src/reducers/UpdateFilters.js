@@ -3,7 +3,7 @@ export default function (state = initialState, action = '') {
   switch (action.type) {
     case "SEARCH_SONGS":
       {
-        let searchKeyword = action.payload.searchKeyword.trim();
+        let searchKeyword = action.payload.searchKeyword;
 
         //updating the state
         let data = {

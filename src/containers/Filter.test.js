@@ -6,7 +6,7 @@ Enzyme.configure({
   adapter: new Adapter()
 });
 
-describe('<FilterComponent/>', () => {
+describe('FilterComponent', () => {
       let initProps;
       let wrapper;
       let filterSongsMock;
@@ -31,17 +31,17 @@ describe('<FilterComponent/>', () => {
           expect(wrapper.debug()).toMatchSnapshot();
         });
 
-        it('should trigger the filterSongs() correctly', () => {
+        it('should trigger the filterSongs correctly', () => {
 
           const event = {
             target: {
               name: 'genre',
               value: 'good',
-              isChecked: true
+              checked: true
             }
           }
           wrapper.find('.dropdown-menu').find('input').at(3).simulate('change', event);
-          expect(filterSongsMock).toHaveBeenCalled();
+          expect(filterSongsMock).toHaveBeenCalledWith('genre','good',true);
         }) 
         afterEach(() => {
           initProps = {};
